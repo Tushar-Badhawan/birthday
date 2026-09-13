@@ -332,13 +332,18 @@ body.no-scroll {
     transition: opacity 1.5s var(--ease-smooth) 0.6s;
     -webkit-clip-path: url(#heartClip);
     clip-path: url(#heartClip);
+
+    filter:
+        drop-shadow(0 0 10px rgba(126, 232, 250, 0.85))
+        drop-shadow(0 0 20px rgba(128, 179, 255, 0.7))
+        drop-shadow(0 0 35px rgba(200, 155, 255, 0.55))
+        drop-shadow(0 0 55px rgba(255, 179, 209, 0.4));
 }
 
 .content-section.heart-section.in-view .heart-photo-wrap {
     opacity: 1;
 }
 
-/* Neon gradient outline — drawn using a stack of drop-shadows on a ring */
 .heart-photo-wrap::before {
     content: '';
     position: absolute;
@@ -348,7 +353,6 @@ body.no-scroll {
     -webkit-clip-path: url(#heartClip);
     clip-path: url(#heartClip);
 
-    /* Fill the whole heart shape with a gradient, then punch a hole in the center */
     background:
         linear-gradient(135deg,
             #7ee8fa 0%,
@@ -356,6 +360,7 @@ body.no-scroll {
             #c89bff 50%,
             #ffb3d1 75%,
             #ffd89b 100%);
+
     -webkit-mask:
         radial-gradient(circle at 50% 50%,
             transparent 0 92%,
@@ -364,15 +369,6 @@ body.no-scroll {
         radial-gradient(circle at 50% 50%,
             transparent 0 92%,
             #000 92.5% 100%);
-}
-
-/* The bright neon glow around the border */
-.heart-photo-wrap {
-    filter:
-        drop-shadow(0 0 10px rgba(126, 232, 250, 0.85))
-        drop-shadow(0 0 20px rgba(128, 179, 255, 0.7))
-        drop-shadow(0 0 35px rgba(200, 155, 255, 0.55))
-        drop-shadow(0 0 55px rgba(255, 179, 209, 0.4));
 }
 
 .heart-photo {
@@ -384,7 +380,6 @@ body.no-scroll {
     filter: brightness(1.05) contrast(1.03) saturate(1.02);
 }
 
-/* Vignette inside the heart to hide the photo's background */
 .heart-photo-wrap::after {
     content: '';
     position: absolute;
@@ -399,7 +394,6 @@ body.no-scroll {
         rgba(6, 13, 31, 0.75) 100%);
 }
 
-/* Fallback if photo is missing */
 .heart-photo-wrap.photo-missing {
     background: radial-gradient(circle at 50% 45%,
         rgba(240, 194, 122, 0.35),
@@ -1525,14 +1519,22 @@ body.no-scroll {
     .heart-section {
         padding: 5rem 1rem;
     }
+
+    /* Fix: full image visible on mobile — no side cropping */
+    .central-img,
+    .final-img {
+        object-fit: contain;
+        object-position: center;
+        background: #060d1f;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
     *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }

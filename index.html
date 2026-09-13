@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ==================== PAGE 1: SCROLLABLE LANDING ==================== -->
+    <section id="page1" class="page1">
+
+        <div class="page1-bg"></div>
+        <div class="page1-aurora"></div>
+        <div class="page1-vignette"></div>
+        <div class="particles" id="page1-particles"></div>
+
+        <button id="btn-landing-music" class="landing-music-toggle" type="button" title="Toggle music">♪</button>
+
+        <div class="page1-scroll" id="page1-scroll">
+
+            <section class="hero-section">
+                <div class="hero-inner">
+                    <div class="page1-sparkle-top">✦</div>
+                    <p class="page1-eyebrow">A little celebration for someone special</p>
+                    <h1 class="page1-heading">
+                        Happy Birthday,<br>
+                        <span class="name-glow">Rishika</span>
+                    </h1>
+                    <div class="page1-divider">
+                        <span class="divider-line"></span>
+                        <span class="divider-icon">❋</span>
+                        <span class="divider-line"></span>
+                    </div>
+                    <p class="page1-subtext">Scroll gently — this was made just for you.</p>
+                    <div class="scroll-cue">
+                        <span>↓</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section poetry-section">
+                <div class="content-inner">
+                    <p class="section-eyebrow">A few words</p>
+                    <div class="poetry-block">
+                        <p>
+                            Some people arrive in your life<br>
+                            like a sweet melodi you listen accidently <br>
+                            steady, warm, and somehow <span style="color: red;"> (good luck)</span><br>
+                            they stay with you.
+                        </p>
+                        <p>
+                            You are one of those people, Rishika.<br>
+                            And 18 years ago, today, on <span style="color: gold;"> hartalika teej </span> <br> 
+                            the world has become a lot more better for me<br>
+                            just because you were born in it.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section heart-section">
+                <div class="content-inner heart-inner">
+
+                    <!-- Hidden SVG that defines the heart clip used for the photo -->
+                    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+                        <defs>
+                            <clipPath id="heartClip" clipPathUnits="objectBoundingBox">
+                                <path d="M0.5,0.944 C0.5,0.944 0.1,0.667 0.1,0.389 C0.1,0.222 0.2,0.111 0.325,0.111 C0.4,0.111 0.475,0.167 0.5,0.25 C0.525,0.167 0.6,0.111 0.675,0.111 C0.8,0.111 0.9,0.222 0.9,0.389 C0.9,0.667 0.5,0.944 0.5,0.944 Z" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                    <div class="heart-and-photo">
+                        <div class="heart-photo-wrap">
+                            <img
+                                class="heart-photo"
+                                src="assets/rishika_photo.jpg"
+                                alt="Rishika"
+                                onerror="this.parentElement.classList.add('photo-missing'); this.style.display='none';"
+                            />
+                        </div>
+                    </div>
+
+                    <p class="heart-line">For every laugh, every long talk,<br>and every moment you made ordinary days feel special.</p>
+                </div>
+            </section>
+
+            <section class="content-section letter-section">
+                <div class="content-inner">
+                    <p class="section-eyebrow">A note from the heart</p>
+                    <div class="letter-block">
+                        <p>
+                            Rishika, some friendships don't need grand gestures. They live in the small things
+                            the "how are you, really?" texts, the inside jokes nobody else understands,
+                            the way an entire day can feel lighter just because you were part of it.
+                        </p>
+                        <p>
+                            Over time, I've realized that the best people aren't the loudest ones.
+                            They're the ones who stay. The ones who make you feel seen without trying.
+                            That's you. You show up quietly, warmly, and fully and that is a rare,
+                            beautiful thing.
+                        </p>
+                        <p>
+                            So today, on your birthday, I wanted to give you something that took a bit of time
+                            not because you asked, but because you deserve it. Every line of code,
+                            every colour, every small animation all of it is a thank-you.
+                            For being you and staying.
+                        </p>
+                        <p class="letter-sign">
+                            — wolf
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section poetry-section">
+                <div class="content-inner">
+                    <p class="section-eyebrow">And one more</p>
+                    <div class="poetry-block">
+                        <p>
+                            May this year bring you soft mornings,<br>
+                            loud laughter, quiet wins,<br>
+                            and people who love you the way you love them.
+                        </p>
+                        <p>
+                            May you always find reasons to smile —<br>
+                            and may the world be as kind to you<br>
+                            as you have always been to it.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-section final-section" id="final-section">
+                <div class="content-inner final-inner">
+
+                    <p class="message-line1">But wait! <br> this was all material…</p>
+                    <p class="message-line2">Someone is waiting for you.</p>
+                    <p class="message-line3">Wanna meet?</p>
+
+                    <div class="curtain-buttons" id="curtain-buttons">
+                        <button id="btn-yes" class="btn-yes" type="button">YES</button>
+                        <button id="btn-no" class="btn-no" type="button">NO</button>
+                    </div>
+
+                    <div class="playful-message" id="playful-message"></div>
+
+                </div>
+            </section>
+
+            <div class="scroll-end-spacer"></div>
+
+        </div>
+    </section>
+
+    <!-- ==================== PAGE 2: RIBBON CUT SCENE ==================== -->
+    <section id="page2-ribbon" class="ribbon-scene">
+
+        <div class="ribbon-scene-bg"></div>
+
+        <div class="ribbon-scene-inner">
+
+            <p class="ribbon-eyebrow">Almost there…</p>
+            <h2 class="ribbon-title">A ribbon stands between you and what's next</h2>
+            <p class="ribbon-hint">Tap the scissors to cut it</p>
+
+            <div class="ribbon-track" id="ribbon-track">
+                <div class="ribbon-piece ribbon-left" id="ribbon-left"></div>
+                <div class="ribbon-piece ribbon-right" id="ribbon-right"></div>
+                <div class="scissors-icon" id="scissors-icon">✂️</div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==================== STAGE: CURTAINS + PAGE 3 + PAGE 4 + PAGE 5 ==================== -->
+    <div id="stage-wrapper" class="stage-wrapper">
+
+        <div class="stage-scroll" id="stage-scroll">
+
+            <!-- ========== PAGE 3 — KANHA DECORATING WORLD ========== -->
+            <section id="page3" class="scene page3-scene">
+
+                <div class="page3-image-wrap">
+                    <img
+                        id="central-img"
+                        class="central-img"
+                        alt="Kanha decorating for Rishika's birthday"
+                    />
+                    <div class="central-placeholder" id="central-placeholder">
+                        <span>🦚</span>
+                        <p>Kanha birthday scene<br>will appear here</p>
+                    </div>
+                </div>
+
+                <!-- Thought bubbles over specific Krishna characters -->
+                <div class="thought-bubbles">
+
+                    <div class="thought-bubble bubble-1" data-delay="2000" data-hide="6000">
+                        <span class="bubble-sparkle">✦</span>
+                        <p>Oh look…</p>
+                        <div class="bubble-tail"></div>
+                    </div>
+
+                    <div class="thought-bubble bubble-2" data-delay="5000" data-hide="9000">
+                        <span class="bubble-sparkle">✦</span>
+                        <p>She's already here.</p>
+                        <div class="bubble-tail"></div>
+                    </div>
+
+                    <div class="thought-bubble bubble-3" data-delay="8000" data-hide="12000">
+                        <span class="bubble-sparkle">✦</span>
+                        <p>We were waiting for you.</p>
+                        <div class="bubble-tail"></div>
+                    </div>
+
+                </div>
+
+                <!-- Scroll CTA — appears after all bubbles are gone -->
+                <div class="scroll-cta" id="scroll-cta">
+                    <p>Follow them</p>
+                    <span class="scroll-cta-arrow">↓</span>
+                </div>
+
+                <!-- Music control -->
+                <div class="music-control" id="music-control">
+                    <button id="btn-music-toggle" class="btn-music" type="button" title="Toggle music">♪</button>
+                    <input
+                        type="range"
+                        id="volume-slider"
+                        class="volume-slider"
+                        min="0"
+                        max="1"
+                        step="0.05"
+                        value="0.3"
+                        title="Volume"
+                    />
+                </div>
+
+            </section>
+
+            <!-- ========== PAGE 4 — FINAL FLUTE SCENE (image only) ========== -->
+            <section id="page4" class="scene page4-scene">
+
+                <div class="page4-image-wrap">
+                    <img
+                        id="final-img"
+                        class="final-img"
+                        alt="Krishna playing flute beside Rishika"
+                    />
+                    <div class="final-placeholder" id="final-placeholder">
+                        <span>🌸</span>
+                        <p>Final scene<br>will appear here</p>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ========== PAGE 5 — FINAL WORDS PAGE ========== -->
+            <section id="page5" class="scene page5-scene">
+
+                <div class="page5-bg"></div>
+
+                <div class="page5-words">
+                    <p class="page5-line line-1" data-delay="1500"> Could not give you what you asked for, sorry</p>
+                    <p class="page5-line line-2" data-delay="4000">so what if i can't bring him to you? <br> <span style="color: red;">i can take you to him </span></p>
+                    <p class="page5-line line-3" data-delay="6500">for you </p>
+                    <p class="page5-line line-4 final-gold" data-delay="9000">Happy Birthday, Rishika.</p>
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- CURTAIN OVERLAY -->
+        <div id="page2" class="page2-overlay">
+
+            <div class="curtain curtain-left" id="curtain-left">
+                <div class="curtain-fold"></div>
+                <div class="curtain-fold"></div>
+                <div class="curtain-fold"></div>
+                <div class="curtain-fold"></div>
+                <div class="curtain-fold"></div>
+                <div class="curtain-fold"></div>
+            </div>
+
+            <div class="curtain curtain-right" id="curtain-right">
+                <div class="curtain-fold"></div>
+                <div class="curtain-fold"></div>
+                <div class="curtain-fold"></div>
+                <div class="curtain-fold"></div>
+                <div class="curtain-fold"></div>
+                <div class="curtain-fold"></div>
+            </div>
+
+            <div class="curtain-sparkles" id="curtain-sparkles"></div>
+
+        </div>
+
+    </div>
+
+    <!-- ==================== AUDIO ==================== -->
+    <audio id="landing-music" loop preload="none">
+        <source src="assets/happy_birthday_chimes.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="bg-music" loop preload="none">
+        <source src="assets/krishna_flute.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="final-music" loop preload="none">
+        <source src="assets/soft_chimes.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- ==================== SCRIPT ==================== -->
+    <script src="script.js"></script>
+
+</body>
+</html>

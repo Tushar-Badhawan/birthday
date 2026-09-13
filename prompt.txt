@@ -1,0 +1,1164 @@
+Yes. The problem was that the previous prompt described the individual features, but it did not establish the website as a strict sequence of scenes. DeepSeek could therefore interpret “ribbon + scissors” as navigation and treat the Kanha SVGs as generic decorations.
+
+This version explicitly defines the story, what happens on each page, what does not happen, and the role of every asset. I have also included the missing-asset fallback and kept the project structure simple.
+
+Hi DeepSeek,
+
+I want you to build a complete interactive birthday-wishing website for my best friend, Rishika.
+
+Before writing any code, understand the following concept carefully.
+
+This website is NOT a normal birthday webpage and it is NOT a collection of unrelated sections.
+
+It is a small interactive birthday story.
+
+The user should experience the website in a specific sequence:
+
+PAGE 1 → Birthday Introduction
+
+```
+    ↓
+```
+
+PAGE 2 → Red Curtain Surprise
+
+```
+    ↓
+```
+
+YES / NO interaction
+
+```
+    ↓
+```
+
+YES
+
+```
+    ↓
+```
+
+Curtains open horizontally in opposite directions
+
+```
+    ↓
+```
+
+PAGE 3 → Kanha Birthday World
+
+```
+    ↓
+```
+
+Additional birthday interaction(s), including a ribbon-cutting moment if appropriate
+
+The transitions should feel like one continuous experience.
+
+IMPORTANT: Do not reinterpret the flow. The sequence described below is the intended user experience.
+
+============================================================
+
+1. TECHNOLOGY
+   ============================================================
+
+Use only:
+
+* HTML
+* CSS
+* Vanilla JavaScript
+
+Do NOT use:
+
+* React
+* Vue
+* Angular
+* Tailwind
+* Bootstrap
+* Node.js
+* npm
+* unnecessary libraries
+* unnecessary frameworks
+
+This should be a simple frontend project.
+
+============================================================
+2. SIMPLE PROJECT STRUCTURE
+===========================
+
+Keep the project structure extremely simple.
+
+Use:
+
+birthday-website/
+│
+├── index.html
+├── style.css
+├── script.js
+│
+└── assets/
+├── kanha_1.svg
+├── kanha_2.svg
+├── kanha_3.svg
+├── kanha_4.svg
+├── kanha_5.svg
+├── birthday_scene.png
+├── scissors.svg
+├── ribbon.svg
+└── krishna_flute.mp3
+
+There may be more Kanha SVGs later.
+
+Do not create complicated folder structures.
+
+Do not create dozens of JavaScript files.
+
+Everything should remain easy for me to understand and edit.
+
+`index.html`
+→ all page/scene markup
+
+`style.css`
+→ all styling, responsive layout and animations
+
+`script.js`
+→ all interactions, transitions, state management and audio
+
+`assets/`
+→ all images, SVGs and audio
+
+============================================================
+3. VERY IMPORTANT — UNDERSTAND THE STORY FIRST
+==============================================
+
+The website should feel like a surprise being revealed gradually.
+
+It should NOT feel like:
+
+"Page 1 → click → completely unrelated Page 2 → click → completely unrelated Page 3."
+
+Instead:
+
+Birthday introduction
+→ theatrical reveal
+→ Kanha world
+
+The visual language should evolve naturally.
+
+Page 1 is cinematic.
+
+Page 2 is theatrical.
+
+Page 3 is peaceful and Kanha-inspired.
+
+The change from red curtains to the blue/cyan/golden Kanha world should be one of the major visual moments of the website.
+
+============================================================
+4. PAGE 1 — CINEMATIC BIRTHDAY INTRODUCTION
+===========================================
+
+Page 1 is the entrance.
+
+The first thing Rishika sees should be a beautiful birthday introduction.
+
+Visual style:
+
+* Dark/soft background
+* Elegant typography
+* Soft blue/cyan lighting
+* White highlights
+* Golden sparkles
+* Floating hearts
+* Small birthday elements
+* Subtle glowing particles
+* Soft cinematic atmosphere
+
+Do not make it look like a generic birthday template.
+
+Do not fill the entire screen with balloons and decorations.
+
+Keep it elegant.
+
+The main text should gradually appear:
+
+"Happy Birthday, Rishika"
+
+You may improve the typography and animation, but keep the wording recognizable.
+
+Below it, include a short supporting line.
+
+Then provide a button:
+
+"Begin the Surprise"
+
+The sequence should be:
+
+1. Background appears.
+2. Small particles/sparkles appear.
+3. Birthday heading fades in.
+4. Supporting text appears.
+5. Button appears.
+6. User clicks "Begin the Surprise".
+7. Page 2 begins.
+
+Use smooth transitions.
+
+============================================================
+5. PAGE 2 — RED THEATRICAL CURTAIN
+==================================
+
+This is NOT another normal webpage.
+
+Page 2 should feel like a theatrical stage.
+
+The screen should initially be covered by two large red curtains.
+
+The curtains should look reasonably realistic:
+
+* Rich red
+* Dark red shadows
+* Fabric folds
+* Subtle highlights
+* Slight texture if possible
+* Golden or warm highlights
+* Small sparkling particles
+
+Do not create two simple flat red rectangles.
+
+The curtain should look like an actual stage curtain.
+
+The curtains should cover the Kanha scene that exists underneath.
+
+IMPORTANT:
+
+PAGE 3 MUST ALREADY EXIST UNDERNEATH THE CURTAINS.
+
+Do not destroy Page 2 and load Page 3 after clicking YES.
+
+Instead:
+
+Page 3 is positioned underneath.
+
+Page 2's curtain layer sits above it.
+
+When the curtains open, the user physically sees Page 3 being revealed.
+
+============================================================
+6. PAGE 2 — THE SURPRISE MESSAGE
+================================
+
+While the curtains are closed, display this type of message in the center:
+
+"This is all material...
+
+Someone is waiting for you.
+
+Wanna see?"
+
+You can improve the wording slightly so it sounds natural, but preserve the meaning.
+
+Initially show:
+
+[ YES ]     [ NO ]
+
+The design should remain elegant and theatrical.
+
+============================================================
+7. WHAT HAPPENS IF SHE CLICKS NO
+================================
+
+If she clicks NO:
+
+DO NOT proceed.
+
+DO NOT open the curtains.
+
+DO NOT reload the page.
+
+Instead:
+
+1. The NO button disappears.
+2. The message changes.
+3. The interaction becomes playful.
+
+For example:
+
+"Nice try..."
+
+then:
+
+"Someone is waiting for you.
+Try again — say YES."
+
+Only YES remains.
+
+The NO option should not reappear.
+
+This should feel playful, not frustrating.
+
+============================================================
+8. WHAT HAPPENS WHEN SHE CLICKS YES
+===================================
+
+This is the main transition.
+
+When YES is clicked:
+
+1. The YES button responds visually.
+2. The center message fades away.
+3. The curtain opening animation begins.
+4. The LEFT curtain moves toward the LEFT edge.
+5. The RIGHT curtain moves toward the RIGHT edge.
+6. Both move at approximately the same time.
+7. Sparkles can appear during the reveal.
+8. Page 3 is revealed underneath.
+9. Once the curtains are fully open, the Kanha world is visible.
+
+The movement MUST be horizontal.
+
+Like:
+
+← LEFT CURTAIN        RIGHT CURTAIN →
+
+NOT:
+
+Curtains falling downward.
+
+NOT:
+
+Curtains disappearing instantly.
+
+NOT:
+
+`display: none`.
+
+Use CSS transforms and transitions.
+
+The reveal should feel like a real theatrical curtain opening.
+
+============================================================
+9. PAGE 3 — THE KANHA BIRTHDAY WORLD
+====================================
+
+This is the main experience.
+
+After the curtains open, the visual atmosphere should completely change.
+
+Page 3 should use:
+
+* Deep navy
+* Dark blue
+* Blue
+* Cyan
+* White
+* Soft golden/yellow
+
+Small amounts of natural green/brown are fine where they come from the artwork.
+
+The overall feeling should be:
+
+Peaceful
+Magical
+Warm
+Elegant
+Beautiful
+Kanha-inspired
+
+It should NOT look like a religious information website.
+
+It should feel like a personal birthday celebration inspired by Kanha.
+
+============================================================
+10. CRITICAL: THERE WILL BE MULTIPLE KANHA SVGs
+===============================================
+
+Do NOT assume there is only one Krishna/Kanha image.
+
+I will provide multiple Kanha SVG files.
+
+For example:
+
+kanha_1.svg
+kanha_2.svg
+kanha_3.svg
+kanha_4.svg
+kanha_5.svg
+...
+
+Each SVG may depict Kanha doing something different.
+
+These are CHARACTER ASSETS.
+
+They are not generic decorative icons.
+
+For example, I may provide:
+
+* A backside Kanha who appears to be decorating something
+* A Kanha sitting with butter
+* A Kanha carrying/passing flowers
+* A Kanha decorating the environment
+* A Kanha holding decorations
+* A Kanha who can be placed near a birthday greeting
+* Other Kanha poses
+
+The exact number and purpose of the SVGs can change.
+
+Build the page so that I can easily add/remove characters.
+
+============================================================
+11. HOW THE KANHA SVGs SHOULD BE USED
+=====================================
+
+Do NOT put the SVGs in a grid.
+
+Do NOT do:
+
+[Kanha] [Kanha] [Kanha]
+
+[Kanha] [Main Image] [Kanha]
+
+[Kanha] [Kanha] [Kanha]
+
+That would look like a gallery.
+
+Instead, compose them into the environment.
+
+Imagine Page 3 as an illustrated birthday world.
+
+For example:
+
+* One Kanha may be in the background decorating.
+* One may be sitting with butter.
+* One may be carrying flowers.
+* One may be standing near the central scene.
+* One may be partially behind a decorative element.
+* One may be positioned near the birthday greeting.
+* One may appear to be helping prepare the celebration.
+
+Each character should have its own position and purpose.
+
+They should look like they are participating in the birthday celebration.
+
+============================================================
+12. CENTRAL HERO IMAGE — MOST IMPORTANT
+=======================================
+
+I will provide one main image for the center.
+
+The filename can be:
+
+`birthday_scene.png`
+
+This is NOT just another decoration.
+
+It is the MAIN HERO SCENE.
+
+The image contains:
+
+* A tree
+* A cow
+* Adult Shri Krishna
+* Krishna sitting peacefully
+* Krishna holding the hand of an animated girl
+* The girl represents Rishika
+* Krishna is wishing her Happy Birthday
+
+This image should be the emotional focal point of Page 3.
+
+Do not distort it.
+
+Do not stretch it.
+
+Maintain its original aspect ratio.
+
+Give it enough space.
+
+The other Kanha SVG characters should support and surround the central scene.
+
+They should NOT visually overpower it.
+
+============================================================
+13. PAGE 3 — VISUAL COMPOSITION
+===============================
+
+Think of the page as a small illustrated environment.
+
+Conceptually:
+
+```
+         Kanha decorating
+
+    Kanha             Kanha
+   flowers            decoration
+
+
+            ┌─────────────┐
+            │             │
+            │   MAIN      │
+            │   SCENE     │
+            │ Krishna +   │
+            │ Rishika     │
+            │ tree + cow  │
+            │             │
+            └─────────────┘
+
+
+    Kanha with butter       Kanha
+```
+
+This is only a conceptual example.
+
+Create a much more natural composition.
+
+Use depth:
+
+* Background Kanha characters
+* Midground decorations
+* Central hero image
+* Foreground Kanha characters where appropriate
+
+Some characters can partially overlap the environment naturally, but never obscure important parts of the central image.
+
+============================================================
+14. KANHA CHARACTER ANIMATIONS
+==============================
+
+Each Kanha SVG can have a subtle animation appropriate to its action.
+
+Examples:
+
+Decorating Kanha:
+→ gently appears
+→ subtle idle movement
+
+Butter Kanha:
+→ subtle idle movement
+
+Flower Kanha:
+→ gentle movement
+→ perhaps subtle flower/petal animation
+
+Birthday-wishing Kanha:
+→ subtle glow
+→ gentle movement
+→ can reveal a small birthday message
+
+Do not make everything bounce.
+
+Do not make every character continuously move.
+
+The goal is:
+
+"the scene is alive"
+
+not:
+
+"the entire website is an animation demo."
+
+============================================================
+15. CENTRAL BIRTHDAY MESSAGE
+============================
+
+The central scene should be accompanied by:
+
+"Happy Birthday, Rishika"
+
+The supporting text should be warm and meaningful.
+
+The message should communicate:
+
+* Friendship
+* Happiness
+* Blessings
+* Appreciation
+* Birthday wishes
+
+IMPORTANT:
+
+Rishika is my best friend.
+
+This is NOT a romantic website.
+
+Do not use romantic language.
+
+The emotional tone should be:
+
+"Someone who genuinely cares about her and wants to make her birthday special."
+
+============================================================
+16. FLOWERS, SPARKLES AND DECORATION
+====================================
+
+Use decorations carefully.
+
+Possible elements:
+
+* Flowers
+* Flower petals
+* Peacock feather motifs
+* Flute motifs
+* Golden sparkles
+* Cyan particles
+* Soft glowing lights
+* Small birthday ribbons
+* Subtle hearts
+
+Do not use all of these everywhere.
+
+Decorations should support the composition.
+
+============================================================
+17. IMPORTANT CLARIFICATION ABOUT THE RIBBON + SCISSORS
+=======================================================
+
+THIS IS VERY IMPORTANT.
+
+The ribbon + scissors is NOT the primary navigation system.
+
+Do NOT put a ribbon and scissors between every page.
+
+Do NOT use the ribbon as a generic "Next Page" button.
+
+The ribbon-cutting interaction is a SPECIFIC BIRTHDAY SURPRISE MOMENT.
+
+It should happen at an appropriate point after the main Kanha experience, if an additional section is implemented.
+
+The concept is:
+
+A decorative ribbon is placed across the scene/next surprise.
+
+A scissors icon sits on the ribbon.
+
+The user clicks the scissors.
+
+The ribbon gets visually cut.
+
+The two pieces separate.
+
+A new birthday surprise/section is revealed.
+
+The interaction should feel like:
+
+"Cut the ribbon to reveal what comes next."
+
+NOT:
+
+"Click scissors to navigate the website."
+
+Keep this distinction clear.
+
+============================================================
+18. FUTURE/ADDITIONAL SECTIONS
+==============================
+
+The website can have additional scenes after Page 3 if they improve the story.
+
+However, do NOT add random pages just to increase the page count.
+
+A good potential flow is:
+
+PAGE 1
+Birthday introduction
+
+↓
+
+PAGE 2
+Curtain surprise
+
+↓
+
+PAGE 3
+Main Kanha birthday world
+
+↓
+
+RIBBON-CUTTING MOMENT
+
+↓
+
+PAGE 4
+A personal birthday message / additional surprise
+
+↓
+
+OPTIONAL FINAL SCENE
+
+Only add these if they make the experience better.
+
+The first three stages are mandatory.
+
+============================================================
+19. MUSIC
+=========
+
+Use soft Krishna flute/instrumental music on Page 3.
+
+The file will be:
+
+`assets/krishna_flute.mp3`
+
+Do not try to autoplay music before the user interacts with the page.
+
+The YES click is already a user interaction, so use that interaction appropriately to begin the music when Page 3 is revealed.
+
+Add a small unobtrusive music control.
+
+The user should be able to:
+
+* Pause
+* Resume
+* Adjust volume if practical
+
+Keep the volume relatively low.
+
+The music should complement the scene.
+
+============================================================
+20. MISSING-ASSET FALLBACK SYSTEM
+=================================
+
+This is REQUIRED.
+
+The website MUST NOT break if I have not yet added all assets.
+
+For every optional image/SVG/audio asset, implement a fallback.
+
+Examples:
+
+If:
+
+`assets/kanha_3.svg`
+
+does not exist:
+
+* Do not show a broken-image icon.
+* Hide that character gracefully.
+* Keep the rest of the scene working.
+
+If the central:
+
+`birthday_scene.png`
+
+does not exist:
+
+* Show a tasteful placeholder area with a message such as:
+  "Central birthday scene will appear here"
+* Keep the surrounding layout functional.
+* Do not show a browser broken-image icon.
+
+If:
+
+`scissors.svg`
+
+is missing:
+
+* Use a simple CSS/text/icon fallback so the ribbon interaction still works.
+
+If:
+
+`ribbon.svg`
+
+is missing:
+
+* Create the ribbon using CSS instead.
+
+If:
+
+`krishna_flute.mp3`
+
+is missing:
+
+* Do not throw a JavaScript error.
+* Disable/hide the music control gracefully.
+* The website must continue working normally.
+
+IMPORTANT:
+
+Do NOT replace missing assets with random internet images.
+
+Do NOT use external Krishna images as fallbacks.
+
+The fallback should be a simple placeholder, CSS element, or hidden optional element.
+
+The website must be fully functional even when only some of my assets exist.
+
+============================================================
+21. ASSET CONFIGURATION
+=======================
+
+Keep the asset references easy to modify.
+
+For example, you may use:
+
+const assets = {
+kanha1: "assets/kanha_1.svg",
+kanha2: "assets/kanha_2.svg",
+kanha3: "assets/kanha_3.svg",
+centralScene: "assets/birthday_scene.png",
+scissors: "assets/scissors.svg",
+ribbon: "assets/ribbon.svg",
+music: "assets/krishna_flute.mp3"
+};
+
+The exact implementation is up to you.
+
+The important thing is that I should be able to replace filenames easily.
+
+============================================================
+22. RESPONSIVE DESIGN
+=====================
+
+The website must work on:
+
+* Desktop
+* Laptop
+* Tablet
+* Mobile
+
+Do NOT simply scale the desktop version down.
+
+On mobile:
+
+* Rearrange Kanha characters.
+* Keep the central scene visible.
+* Keep the birthday message readable.
+* Keep buttons easy to tap.
+* Keep curtains functional.
+* Keep the curtain animation horizontal.
+* Keep the ribbon/scissors interaction usable.
+* Prevent characters from covering important content.
+
+Use media queries.
+
+============================================================
+23. ANIMATION PERFORMANCE
+=========================
+
+Keep animations lightweight.
+
+Prefer:
+
+* CSS transforms
+* CSS opacity
+* CSS keyframes
+* simple JavaScript
+
+Avoid:
+
+* expensive continuous JavaScript loops
+* unnecessary canvas effects
+* huge particle systems
+* unnecessary libraries
+
+Use `transform` and `opacity` for animations whenever possible.
+
+============================================================
+24. NO UNNECESSARY UI
+=====================
+
+Do NOT add:
+
+* Navigation bars
+* Login systems
+* Forms
+* Databases
+* User accounts
+* Backend
+* Social media buttons
+* Dashboard elements
+* Random menus
+* Unnecessary cards
+* Excessive buttons
+
+This is an interactive birthday surprise.
+
+The interface should stay focused on the experience.
+
+============================================================
+25. VISUAL QUALITY
+==================
+
+The website should be:
+
+* Clean
+* Properly aligned
+* Elegant
+* Smooth
+* Responsive
+* Personal
+* Realistic where appropriate
+* Visually balanced
+
+Do not confuse "interactive" with "everything needs to move."
+
+The animations should be subtle.
+
+The visual hierarchy is more important than the number of effects.
+
+============================================================
+26. IMPLEMENTATION ARCHITECTURE
+===============================
+
+Use one `index.html`.
+
+Create the main scenes as full-screen sections/states.
+
+For example:
+
+<section id="page1">
+    ...
+</section>
+
+<section id="page2">
+    ...
+</section>
+
+<section id="page3">
+    ...
+</section>
+
+If you create Page 4, continue the same approach.
+
+Do not reload the browser between pages.
+
+Do not navigate to separate HTML files unless there is a very strong reason.
+
+The entire experience should feel continuous.
+
+============================================================
+27. IMPORTANT STATE FLOW
+========================
+
+Implement the state flow approximately as:
+
+INITIAL STATE
+→ Page 1 visible
+
+CLICK "Begin the Surprise"
+→ Page 2 becomes visible
+→ curtains closed
+
+CLICK "NO"
+→ NO disappears
+→ message changes
+→ remain on Page 2
+
+CLICK "YES"
+→ message fades
+→ curtains open horizontally
+→ Page 3 revealed underneath
+→ Kanha scene becomes visible
+→ flute music can begin
+
+PAGE 3
+→ Kanha characters animate subtly
+→ central Krishna/Rishika scene remains focal point
+
+LATER
+→ optional ribbon/scissors interaction
+→ ribbon is cut
+→ next birthday surprise is revealed
+
+Do not change this core sequence.
+
+============================================================
+28. IMPORTANT DISTINCTION BETWEEN ELEMENTS
+==========================================
+
+Treat these as different concepts:
+
+CURTAINS
+→ Page 2 transition mechanism.
+
+KANHA SVGs
+→ Characters participating in the Page 3 world.
+
+CENTRAL BIRTHDAY IMAGE
+→ Main emotional focal point.
+
+RIBBON + SCISSORS
+→ A separate birthday surprise interaction.
+
+Do NOT merge these concepts together.
+
+In particular:
+
+The ribbon/scissors should NOT become the mechanism for opening the red curtains.
+
+The red curtains are opened by the YES button.
+
+The ribbon/scissors interaction happens separately.
+
+============================================================
+29. FINAL SELF-TEST
+===================
+
+Before giving me the final code, test the logic mentally and structurally.
+
+Verify:
+
+PAGE 1:
+
+* Loads correctly.
+* Birthday text appears.
+* Button works.
+* Animations are subtle.
+
+PAGE 2:
+
+* Red curtains cover the scene.
+* Curtains look theatrical.
+* Sparkles appear.
+* Message is visible.
+* YES works.
+* NO works.
+* NO disappears after clicking.
+* Message changes.
+* Clicking NO does not proceed.
+
+YES:
+
+* Message disappears.
+* Curtains move horizontally.
+* Left curtain goes left.
+* Right curtain goes right.
+* No vertical curtain drop.
+* No instant disappearance.
+* Page 3 is underneath.
+
+PAGE 3:
+
+* Kanha world appears.
+* Color palette changes appropriately.
+* Multiple Kanha SVGs can exist simultaneously.
+* Each Kanha has its own position.
+* Characters do not appear as a grid.
+* Characters feel like participants in the environment.
+* Central Krishna/Rishika image is the focal point.
+* Central image maintains aspect ratio.
+* Birthday message is readable.
+* Animations are subtle.
+* Music works after user interaction.
+
+RIBBON:
+
+* Is NOT used as general navigation.
+* Is a separate birthday interaction.
+* Scissors cut the ribbon.
+* Ribbon pieces separate.
+* Next surprise is revealed.
+
+MISSING ASSETS:
+
+* No broken image icons.
+* Missing Kanha SVGs do not break the page.
+* Missing central image shows a tasteful placeholder.
+* Missing scissors has a fallback.
+* Missing ribbon has a CSS fallback.
+* Missing audio does not cause errors.
+
+RESPONSIVE:
+
+* Desktop works.
+* Mobile works.
+* Characters reposition appropriately.
+* Buttons remain usable.
+* Curtain reveal remains correct.
+
+============================================================
+30. WHAT I WANT YOU TO DELIVER
+==============================
+
+Do not only explain the design.
+
+Actually implement it.
+
+Give me the complete:
+
+`index.html`
+
+`style.css`
+
+`script.js`
+
+Also provide a short README explaining:
+
+* How to run it.
+* Where to put assets.
+* What each Kanha SVG is intended for.
+* Where to put the central birthday image.
+* Where to put the flute audio.
+* How to add another Kanha SVG.
+* How the missing-asset fallback works.
+* Which CSS variables/classes are easiest to customize.
+
+If you think a small improvement would make the experience better, you may implement it, but do not change the fundamental story.
+
+The final experience should feel like:
+
+A birthday surprise begins.
+
+↓
+
+The screen transforms into a theatrical stage.
+
+↓
+
+Red sparkling curtains hide a secret.
+
+↓
+
+She is asked:
+
+"This is all material...
+Someone is waiting for you.
+Wanna see?"
+
+↓
+
+She tries NO.
+
+↓
+
+NO disappears.
+
+↓
+
+She has to choose YES.
+
+↓
+
+YES is clicked.
+
+↓
+
+The red curtains slowly open in opposite directions.
+
+↓
+
+A peaceful blue/cyan/golden Kanha world is revealed.
+
+↓
+
+Multiple Kanha characters are already participating in the celebration — decorating, carrying flowers, sitting with butter, etc.
+
+↓
+
+At the center is the main scene I provide:
+
+Adult Krishna sitting beneath a tree with a cow nearby, holding the hand of an animated girl representing Rishika and wishing her Happy Birthday.
+
+↓
+
+Soft Krishna flute music begins.
+
+↓
+
+The scene feels alive through subtle animations.
+
+↓
+
+Later, a separate ribbon-and-scissors interaction can reveal another birthday surprise.
+
+The most important thing is that this should feel like ONE coherent birthday story, not a collection of unrelated web components.
+
+Keep it simple technically, but make the visual experience thoughtful and polished.
